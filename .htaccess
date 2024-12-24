@@ -1,0 +1,46 @@
+# Enable mod_rewrite for URL rewriting
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all requests to the /public folder
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+    # Disable directory listing
+    Options -Indexes
+</IfModule>
+
+# Handle Laravel-specific configurations
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect index.php to root
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.php [NC]
+    RewriteRule ^ index.php [L,R=301]
+
+    # Redirect all requests to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Security settings
+# Prevent access to .env and other sensitive files
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to .htaccess
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Increase file upload size limits if needed
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
