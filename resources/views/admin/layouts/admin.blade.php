@@ -649,7 +649,7 @@
                                                 alt="icon"
                                                 class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
                                             <span class="ml-3">
-                                                {{ __('messages.tips') }}
+                                                News
                                             </span>
                                         </x-sidebar-item>
 
@@ -737,7 +737,7 @@
                                     <img src="{{ asset('assets/icons/page.png') }}" alt="icon"
                                         class="object-contain w-8 h-8 p-0.5 bg-white dark:bg-gray-200 rounded">
                                     <span class="ml-3">
-                                        {{ __('messages.page') }}
+                                        {{ __('messages.pages') }}
                                     </span>
                                 </x-sidebar-item>
                             </li>
