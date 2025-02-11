@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\PublicationController;
-use App\Http\Controllers\Api\linkController;
+use App\Http\Controllers\Api\LinkController;
 use App\Http\Controllers\Api\VideoController;
 use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\AudioController;
