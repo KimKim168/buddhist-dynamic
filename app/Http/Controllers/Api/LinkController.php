@@ -25,7 +25,7 @@ class LinkController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'name_kh' => 'nullable|string|max:255',
+            // 'name_kh' => 'nullable|string|max:255',
             'image' => 'nullable|url',
             'url' => 'required|url',
             'order_index' => 'required|integer',
@@ -65,7 +65,7 @@ class LinkController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'sometimes|string|max:255',
-            'name_kh' => 'nullable|string|max:255',
+            // 'name_kh' => 'nullable|string|max:255',
             'image' => 'nullable|url',
             'url' => 'sometimes|url',
             'order_index' => 'sometimes|integer',
