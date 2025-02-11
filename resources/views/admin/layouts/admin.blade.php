@@ -210,10 +210,9 @@
                         </svg>
                         <span class="sr-only">Toggle sidebar</span>
                     </button>
-                    <a href="/" class="flex items-center justify-center mr-4">
+                    <a href="https://buddhist-institute-website.kimsoreya.site/" class="flex items-center justify-center mr-4">
                         <img src="{{ asset('assets/images/logo/logo.png') }}" class="h-10 mr-2" alt="Flowbite Logo" />
-                        <span class="self-center text-base font-semibold whitespace-nowrap dark:text-white">Buddhist
-                            Institute</span>
+                        <span class="self-center text-base font-semibold whitespace-nowrap dark:text-white">Buddhist Institute</span>
                     </a>
 
                 </div>
