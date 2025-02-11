@@ -36,6 +36,7 @@ class LinkController extends Controller
         }
 
         $link = Link::create($request->all());
+        // console.log($link); 
         return response()->json(['message' => 'Link created successfully', 'data' => $link], 201);
     }
 

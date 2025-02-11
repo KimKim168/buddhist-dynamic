@@ -17,7 +17,6 @@ class LinkCreate extends Component
 
 
     public $name = null;
-    public $name_kh = null;
     public $link = null;
     public $order_index = 0;
     public $description = null;
@@ -52,7 +51,6 @@ class LinkCreate extends Component
         $this->dispatch('livewire:updated');
         $validated = $this->validate([
             'name' => 'required|string|max:255',
-            'name_kh' => 'required|string|max:255',
             'image' => 'required|file|max:2048',
             'link' => 'required|url|max:255',
             'order_index' => 'nullable',

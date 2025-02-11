@@ -74,12 +74,12 @@
                     required autofocus placeholder="Name" />
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
-            <div>
+            {{-- <div>
                 <x-input-label for="name_kh" :value="__('messages.nameKh')" /><span class="text-red-500">*</span>
                 <x-text-input id="name_kh" class="block w-full mt-1" type="text" name="name_kh"
                     wire:model='name_kh' required autofocus placeholder="Name KH" />
                 <x-input-error :messages="$errors->get('name_kh')" class="mt-2" />
-            </div>
+            </div> --}}
             <!-- End Name -->
 
             <div>
@@ -101,12 +101,12 @@
                     wire:model='location_first' required autofocus placeholder="Location First" />
                 <x-input-error :messages="$errors->get('location_first')" class="mt-2" />
             </div>
-            <div>
+            {{-- <div>
                 <x-input-label for="location_second" :value="__('messages.locationSecond')" /><span class="text-red-500">*</span>
                 <x-text-input id="location_second" class="block w-full mt-1" type="text" name="location_second"
                     wire:model='location_second' required autofocus placeholder="Location Second" />
                 <x-input-error :messages="$errors->get('location_second')" class="mt-2" />
-            </div>
+            </div> --}}
             <div class="col-span-1">
                 <label for="link" class = 'mb-4 text-sm font-medium text-gray-600 dark:text-white'>
                     {{ __('messages.linkLocationFirst') }}
@@ -115,7 +115,7 @@
                     wire:model='link_location_first' required autofocus placeholder="Link or URL" />
                 <x-input-error :messages="$errors->get('link_location_first')" class="mt-2" />
             </div>
-            <div class="col-span-1">
+            {{-- <div class="col-span-1">
                 <label for="link" class = 'mb-4 text-sm font-medium text-gray-600 dark:text-white'>
                     {{ __('messages.linkLocationSecond') }}
                 </label>
@@ -123,7 +123,7 @@
                     name="link_location_second" wire:model='link_location_second' required autofocus
                     placeholder="Link or URL" />
                 <x-input-error :messages="$errors->get('link_location_second')" class="mt-2" />
-            </div>
+            </div> --}}
         </div>
         {{-- <div>
             <x-input-label for="iframe" :value="__('Iframe')" /><span class="text-red-500">*</span>
@@ -220,56 +220,7 @@
             </div>
             {{-- End Image Upload --}}
         </div>
-        <div class="mb-5">
-            {{-- Start Image Upload --}}
-            <div class="flex items-center mb-5 space-4" wire:key='uploadimage'>
-                @if ($image_second)
-                    <div class="pt-5 max-w-40">
-                        <img src="{{ $image_second->temporaryUrl() }}" alt="Selected Image"
-                            class="max-w-full pr-4 max-h-40" />
-                    </div>
-                @else
-                    <div class="pt-5 max-w-40">
-                        <img src="{{ asset('assets/images/contacts/' . $contact->image_second) }}"
-                            alt="Selected Image" class="max-w-full pr-4 max-h-40" />
-                    </div>
-                @endif
-                <div class="flex flex-col flex-1">
-                    <label class='mb-4 text-sm font-medium text-gray-600 dark:text-white'>
-                        {{ __('messages.uploadImage') }} <span class="text-red-500">*</span>
-                    </label>
-                    <div class="relative flex items-center justify-center w-full -mt-3 overflow-hidden">
-                        <label for="dropzone-file"
-                            class="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                </svg>
-                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
-                                        class="font-semibold">{{ __('messages.clickToUpload') }}</span>
-                                    {{ __('messages.orDragAndDrop') }}</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 2MB)</p>
 
-                            </div>
-                            <input wire:model="image_second" accept="image/png, image/jpeg, image/gif"
-                                id="dropzone-file" type="file" class="absolute h-[140%] w-[100%]" />
-                        </label>
-                    </div>
-                    <div wire:loading wire:target="image" class="text-blue-700">
-                        <span>
-                            <img class="inline w-6 h-6 text-white me-2 animate-spin"
-                                src="{{ asset('assets/images/reload.png') }}" alt="reload-icon">
-                            Uploading...
-                        </span>
-                    </div>
-                    <x-input-error :messages="$errors->get('image_second')" class="mt-2" />
-                </div>
-            </div>
-            {{-- End Image Upload --}}
-        </div>
 
         {{-- <div class="mb-5" wire:ignore>
             <x-input-label for="description" :value="__('messages.description')" />

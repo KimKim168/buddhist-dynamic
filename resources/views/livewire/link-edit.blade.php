@@ -74,12 +74,12 @@
                     required autofocus placeholder="Name" />
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
-            <div>
+            {{-- <div>
                 <x-input-label for="name_kh" :value="__('messages.nameKh')" /><span class="text-red-500">*</span>
                 <x-text-input id="name_kh" class="block w-full mt-1" type="text" name="name_kh" wire:model='name_kh'
                     required autofocus placeholder="Name KH" />
                 <x-input-error :messages="$errors->get('name_kh')" class="mt-2" />
-            </div>
+            </div> --}}
             <div class="col-span-1">
                 <label for="order_index" class = 'mb-4 text-sm font-medium text-gray-600 dark:text-white'>
                    {{ __('messages.orderIndex') }}

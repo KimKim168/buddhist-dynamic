@@ -82,7 +82,7 @@
                         </div>
                     </th>
 
-                    <th scope="col" class="px-4 py-3">{{__('messages.nameKh')}}</th>
+                    {{-- <th scope="col" class="px-4 py-3">{{__('messages.nameKh')}}</th> --}}
                     <th scope="col" class="px-4 py-3">{{__('messages.link')}}</th>
                     <th scope="col" class="px-4 py-3">{{__('messages.orderIndex')}}</th>
                     <th scope="col" class="px-4 py-3">{{__('messages.createdAt')}}</th>
@@ -104,7 +104,7 @@
                             </a>
                         </th>
                         <x-table-data value="{{ $item->name }}" />
-                        <x-table-data value="{{ $item->name_kh }}" />
+                        {{-- <x-table-data value="{{ $item->name_kh }}" /> --}}
                         {{-- <x-table-data value="{{ $item->description }}" /> --}}
                         <x-table-data>
                             <span
