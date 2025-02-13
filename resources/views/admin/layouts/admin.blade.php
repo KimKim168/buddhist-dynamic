@@ -416,7 +416,7 @@
         <aside
             class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 "
             aria-label="Sidenav" id="drawer-navigation">
-            <a href="/" class="flex flex-col items-center justify-center p-2 border-b dark:border-b-slate-600">
+            <a href="https://buddhist-institute-website.kimsoreya.site/" class="flex flex-col items-center justify-center p-2 border-b dark:border-b-slate-600">
 
                 <img src="{{ asset('assets/images/logo/logo.png') }}"
                     class="object-cover h-12  rounded-full aspect-square" alt="Flowbite Logo" />
